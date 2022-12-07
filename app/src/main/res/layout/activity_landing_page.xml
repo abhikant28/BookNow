@@ -6,12 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".LandingPage">
 
-        <FrameLayout
-            android:id="@+id/LandingPage_frameLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/LandingPage_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Hi,"
+
+        android:background="#9C2D2D"
+        app:titleTextColor="@color/white"
+        android:backgroundTint="#CC3636"
+        android:layout_alignParentTop="true"
+        app:menu="@menu/landing_toolbar_menu"/>
+
+    <FrameLayout
+        android:id="@+id/LandingPage_frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LandingPage_toolbar"
+        android:layout_above="@+id/LandingPage_bottomNavigationBar"
+ />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/LandingPage_bottomNavigationBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/bottom_nav_menu"

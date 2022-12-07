@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TicketView"
+    android:gravity="center_horizontal">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Ticket"
+        app:titleTextColor="@color/white"
+        android:background="#CC3636"
+        app:menu="@menu/ticket_view_menu"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <TextView
+        android:layout_margin="20dp"
+        android:id="@+id/tickectView_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Name"
+        android:textSize="35dp" />
+
+    <TextView
+        android:layout_margin="20dp"
+        android:id="@+id/tickectView_tv_type"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:text="Type"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_margin="20dp"
+        android:id="@+id/tickectView_tv_date"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textSize="25dp" />
+    <TextView
+        android:id="@+id/tickectView_tv_time"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:text="Timings"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tickectView_tv_seats"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seats"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_margin="20dp"
+        android:id="@+id/tickectView_tv_amountPaid"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Billed Amount"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_margin="20dp"
+        android:id="@+id/tickectView_tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Status"
+        android:textSize="30dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <Button
+        android:id="@+id/tickectView_btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancel Ticket?"/>
+</LinearLayout>

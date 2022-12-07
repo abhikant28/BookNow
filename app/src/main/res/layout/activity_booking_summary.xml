@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookingSummary">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/BookingSummary_tb_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@color/white"
+        android:background="#CC3636"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Booking Summary" />
+
+    <TextView
+        android:id="@+id/BookingSummary_tv_eventName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:text="Event Name"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BookingSummary_tb_title" />
+
+    <TextView
+        android:id="@+id/BookingSummary_tv_dateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Date and Time"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/BookingSummary_tv_eventName"
+        app:layout_constraintTop_toBottomOf="@+id/BookingSummary_tv_eventName" />
+
+    <TextView
+        android:id="@+id/BookingSummary_tv_lang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="Language"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/BookingSummary_tv_dateTime" />
+
+    <TextView
+        android:id="@+id/BookingSummary_tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/BookingSummary_tv_dateTime"
+        app:layout_constraintTop_toBottomOf="@+id/BookingSummary_tv_dateTime" />
+
+    <TextView
+        android:id="@+id/BookingSummary_tv_seats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Seats"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/BookingSummary_tv_date"
+        app:layout_constraintTop_toBottomOf="@+id/BookingSummary_tv_date" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Ticket Price (Each)"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/BookingSummary_tv_seats"
+        app:layout_constraintTop_toBottomOf="@+id/BookingSummary_tv_seats" />
+
+    <TextView
+        android:id="@+id/BookingSummary_tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="Price"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BookingSummary_tv_seats" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Convenience Fee"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/BookingSummary_tv_convFee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="40.0"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/BookingSummary_tv_price"
+        app:layout_constraintTop_toBottomOf="@+id/BookingSummary_tv_price" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Total Amount"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/BookingSummary_tv_totalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bohot"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/BookingSummary_tv_convFee"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <Button
+        android:id="@+id/BookingSummary_btn_checkOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Checkout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/BookingSummary_btn_moreBooking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Make more bookings?"
+        app:layout_constraintBottom_toTopOf="@+id/BookingSummary_btn_checkOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+</androidx.constraintlayout.widget.ConstraintLayout>

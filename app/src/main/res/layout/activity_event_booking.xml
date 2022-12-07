@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EventBooking">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/EventBooking_toolbar_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@color/white"
+        android:background="#CC3636"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Movie Now"/>
+
+    <TextView
+        android:id="@+id/EventBooking_tv_timing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Time and Date"
+        android:layout_marginStart="5dp"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EventBooking_toolbar_event" />
+
+    <TextView
+        android:id="@+id/EventBooking_toolbar_ticketCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text=""
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EventBooking_tv_timing" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView4"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="J\nI\nH\nG\nF\nE\nD\nC\nB\nA"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/EventBooking_recyclerView_seatingLayOut"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/EventBooking_recyclerView_seatingLayOut" />-->
+<!--        &lt;!&ndash;            app:layout_constraintBottom_toTopOf="@+id/imageView"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintEnd_toStartOf="@+id/EventBooking_recyclerView_seatingLayOut"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintTop_toTopOf="@+id/EventBooking_recyclerView_seatingLayOut" &ndash;&gt;-->
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/EventBooking_recyclerView_seatingLayOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/EventBooking_tv_timing"
+        tools:listitem="@layout/eventbooking_seat_layout_list_item" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="250dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="10dp"
+        android:text="Stage is Here!"
+        android:textSize="18dp"
+        android:textAlignment="center"
+        android:backgroundTint="#C16516"
+        android:background="@drawable/ic_baseline_check_box_outline_blank_24"
+        app:layout_constraintEnd_toEndOf="@+id/EventBooking_recyclerView_seatingLayOut"
+        app:layout_constraintStart_toStartOf="@+id/EventBooking_recyclerView_seatingLayOut"
+        app:layout_constraintTop_toBottomOf="@id/EventBooking_recyclerView_seatingLayOut" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:backgroundTint="#46C80F"
+        app:cardCornerRadius="5dp"
+        android:foregroundGravity="center"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/EventLayout_seat_listItem_cardView_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:background="@color/white"
+            app:cardCornerRadius="5dp">
+
+            <TextView
+                android:id="@+id/EventLayout_seat_listItem_textView_seatNumber"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="#46C80F"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#5E5E5E"
+        app:cardCornerRadius="5dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView2"
+        app:layout_constraintStart_toStartOf="@+id/cardView2"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/EventLayout_seat_listItem_cardView_reserved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:backgroundTint="#7A7A7A"
+            app:cardCornerRadius="5dp">
+
+            <TextView
+                android:id="@+id/EventLayout_seat_listItem_textView_seatNumbe_reservedr"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#46C80F"
+        app:cardCornerRadius="5dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView3"
+        app:layout_constraintStart_toStartOf="@+id/cardView3"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/EventLayout_seat_listItem_cardView_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:backgroundTint="#46C80F"
+            app:cardCornerRadius="5dp">
+
+            <TextView
+                android:id="@+id/EventLayout_seat_listItem_textView_seatNumbe_r"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=": Available"
+        app:layout_constraintHorizontal_bias="0.176"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardView2"
+        app:layout_constraintTop_toTopOf="@+id/cardView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=": Reserved"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.179"
+        app:layout_constraintStart_toEndOf="@+id/cardView2"
+        app:layout_constraintTop_toTopOf="@+id/cardView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=": Selected"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="18dp"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toEndOf="@+id/cardView2"
+        app:layout_constraintTop_toTopOf="@+id/cardView32" />
+
+    <Button
+        android:id="@+id/EventBooking_btn_book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Book"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
