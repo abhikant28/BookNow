@@ -19,8 +19,9 @@ public class CompleteLogin extends AppCompatActivity {
         setContentView(R.layout.activity_complete_login);
 
         EditText et=findViewById(R.id.completeLogin_et_otp);
+        Button b=findViewById(R.id.Submit_button);
 
-        new Handler().postDelayed(() -> et.setText("1234556"), 3000);
+        new Handler().postDelayed(() -> go(et,b), 3000);
 
 
         String num=getIntent().getExtras().getString("NUM");
@@ -29,13 +30,16 @@ public class CompleteLogin extends AppCompatActivity {
         SharedPrefs.saveUserData(this, name, num);
         SharedPrefs.firstTime(this);
 
-        Button b=findViewById(R.id.Submit_button);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),LandingPage.class));
             }
         });
+
+    }
+    private void go(EditText et, Button b){
+        et.setText("1234556");
         b.performClick();
 
     }
